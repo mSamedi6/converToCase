@@ -1,0 +1,8 @@
+# Ignore Visual Studio 2015/2017 cache/options directory
+.vs/
+obj/
+bin/
+
+# Include releases folder with exe copy and shortcut
+!releases/
+!releases/*.exe
