@@ -20,8 +20,8 @@ String secondVariableName = "Hello";
 
     Можно просто запустить .exe в папке releases
     Или:
-    1.Запустите cmd
-    2.Измените текущий рабочий каталог на каталок с программой. Используйте cd и путь к каталогу, содержащий исполняемый файл программы converToCase.exe:
+    1.Запускаем cmd
+    2.Изменяем текущий рабочий каталог на каталок с программой. Использем cd и путь к каталогу, содержащий исполняемый файл программы converToCase.exe:
     cd диск:\путь\к\папке\с\проектом\converToCase\converToCase\bin\Debug
     3.Вызываем программу converTo.exe
     4.Программа начинает своё выполнение, выведя сообщение:
@@ -34,12 +34,22 @@ String secondVariableName = "Hello";
 При запуске приложение запрашивает у пользователя указать путь к директории и стили из которого, в который будет преобразовываться содержимое файлов по заданной директории. 
 
 ### Запуск приложения на Linux:
-    1.Открыть терминал
-    2.Измените текущий рабочий каталог на путь, где находится исполняемый файл программы converToCase.exe, используя команду cd:
-    cd /путь/к/папке/с/проектом/converToCase/converToCase/bin/Debug
-    3.Затем вызовите программу converToCase.exe, указав необходимый путь к директории и стили преобразования, используя команду:
-    mono converToCase.exe
 
+    Для сборки и компиляции проекта на Linux, вам понадобится установить .NET SDK 6.0. Вот инструкция по сборке вашего проекта:
+        1.Установите .NET SDK 6.0, скачав его с официального сайта по ссылке: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+        2.Выполняем следующие команды в терминале:
+            wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+            sudo dpkg -i packages-microsoft-prod.deb
+            sudo apt-get update
+            sudo apt-get install -y apt-transport-https
+            sudo apt-get update
+            sudo apt-get install -y dotnet-sdk-6.0
+        3.После установки SDK 6.0 переходим в каталог с проектом, содержащий файл converToCase.csproj.
+        4.Переходим в каталог, где находится файл converToCase.csproj:
+            cd /путь/к/папке/c/проектом/converToCase-master/converToCase
+        5.Запускаем компиляцию:
+            dotnet build -c Release
+            
 ## Команды
 
 ### Help:
